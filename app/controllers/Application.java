@@ -1,8 +1,5 @@
 package controllers;
 
-import play.mvc.Result;
-import org.pac4j.play.java.JavaController;
-
 import model.JsonContent;
 
 import org.pac4j.core.exception.TechnicalException;
@@ -11,24 +8,18 @@ import org.pac4j.play.Config;
 import org.pac4j.play.java.JavaController;
 import org.pac4j.play.java.RequiresAuthentication;
 
-/**
- * Created by ubu on 26.06.15.
- */
-public class Application extends JavaController {
+import play.mvc.Result;
+import play.twirl.api.Content;
 
+public class Application extends JavaController {
 
     public static Result index() throws TechnicalException {
         // profile (maybe null if not authenticated)
         final CommonProfile profile = getUserProfile();
-
         final String urlTwitter = getRedirectAction("TwitterClient", "/?1").getLocation();
-
-        final String urlOidc = getRedirectAction("OidcClient", "/?5").getLocation();
-
-        return ok(views.html.index.render(profile, urlTwitter, urlOidc));
+        final String urlOidc = getRedirectAction("Google2Client", "/?2").getLocation();
+        return ok(views.html.index.render(profile,  urlTwitter, urlOidc));
     }
-
-
 
     private static Result protectedIndex() {
         // profile
@@ -42,9 +33,11 @@ public class Application extends JavaController {
     }
 
 
-    @RequiresAuthentication(clientName = "OidcClient")
+    @RequiresAuthentication(clientName = "Google2Client")
     public static Result oidcIndex() {
         return protectedIndex();
     }
+
+
 
 }

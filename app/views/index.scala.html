@@ -1,21 +1,16 @@
-@(profile : org.pac4j.core.profile.CommonProfile, urlTwitter: String, urlOidc: String )
-<h1>index</h1>
+@(profile : org.pac4j.core.profile.CommonProfile, urlTwitter: String, urlOidc: String)
 
-<a href="twitter/index.html">Protected url by Twitter : twitter/index.html</a><br />
+<h1>Eduonix Secure Applications</h1>
 
-<a href="oidc/index.html">Protected url by OpenID Connect : oidc/index.html</a><br />
+<a href="@urlTwitter">Authenticate with Twitter</a><br />
+
+<a href="@urlOidc">Authenticate with OpenID Connect</a><br />
+
 <br />
-<a href="stateless">Stateless authentication resource : stateless</a><br />
-<br />
+<hr />
 <a href="logout">logout</a>
 <br /><br />
 profile : @profile
-<br /><br />
-<hr />
-
-<a href="@urlTwitter">Authenticate with Twitter</a><br />
-<a href="@urlOidc">Authenticate with OpenID Connect</a><br />
-
 
 <!-- Link to Google CDN's jQuery; fall back to local -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

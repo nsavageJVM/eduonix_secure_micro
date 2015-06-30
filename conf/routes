@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index()
+GET     /facebook/index.html        controllers.Application.facebookIndex()
 GET     /twitter/index.html         controllers.Application.twitterIndex()
 GET     /oidc/index.html            controllers.Application.oidcIndex()
 GET     /callback                   org.pac4j.play.CallbackController.callback()

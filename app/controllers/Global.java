@@ -19,6 +19,7 @@ public class Global extends GlobalSettings {
     public void onStart(final Application app) {
         Config.setErrorPage401(views.html.error401.render().toString());
         Config.setErrorPage403(views.html.error403.render().toString());
+        Config.setSessionTimeout(240);
 
         final String baseUrl = Play.application().configuration().getString("baseUrl");
         final String fbId = Play.application().configuration().getString("fbId");

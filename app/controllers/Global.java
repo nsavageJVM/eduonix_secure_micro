@@ -27,10 +27,10 @@ public class Global extends GlobalSettings {
 
         final FacebookClient facebookClient = new FacebookClient(fbId, fbSecret);
 
-        final TwitterClient twitterClient = new TwitterClient("a4XXQuB33nLXv9ZVyYqmOFEIw",
-                "lAJWohkdFcuCwMhC69XcW8nnwSVQgWkdILcue8yl1n0C68PvA6");
+        final TwitterClient twitterClient = new TwitterClient("xxxxxxxxxxxxxxxxxx",
+                "xxxxxxxxxxxxxxxxxx");
 
-        Google2Client oidcClient = new Google2Client("760339641030-r9vlqmov030avl9suok71k2kdi8ivt44.apps.googleusercontent.com", "vfKpbAUnUSheMWBq6Q7qOaYf");
+        Google2Client oidcClient = new Google2Client("xxxxxxxxxxxxxxxxx", "xxxxxxxxxxxxxx");
         oidcClient.setScope(Google2Client.Google2Scope.EMAIL);
 
 

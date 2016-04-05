@@ -30,7 +30,9 @@ public class Global extends GlobalSettings {
         final TwitterClient twitterClient = new TwitterClient("xxxxxxxxxxxxxxxxxx",
                 "xxxxxxxxxxxxxxxxxx");
 
-        Google2Client oidcClient = new Google2Client("xxxxxxxxxxxxxxxxx", "xxxxxxxxxxxxxx");
+        Google2Client oidcClient =
+                new Google2Client("xxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "xxxxxxxxxxxxxxxxxxxxxxxxxx");
         oidcClient.setScope(Google2Client.Google2Scope.EMAIL);
 
 

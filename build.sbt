@@ -8,12 +8,15 @@ scalaVersion := "2.11.1"
 
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" % "play-cache_2.11" % "2.3.0",
-  "net.minidev" % "json-smart" % "2.1.1",
-  "javax.mail" % "mail" % "1.4.7",
-  "com.nimbusds" % "lang-tag" % "1.4",
-  "com.nimbusds" % "nimbus-jose-jwt" % "3.10",
-  "com.nimbusds" % "oauth2-oidc-sdk" % "4.13"
+   "com.typesafe.play" % "play-cache_2.11" % "2.3.0",
+   "net.minidev" % "json-smart" % "2.1.1",
+   "javax.mail" % "mail" % "1.4.7",
+   "com.nimbusds" % "lang-tag" % "1.4",
+   "com.nimbusds" % "nimbus-jose-jwt" % "3.10",
+   "com.nimbusds" % "oauth2-oidc-sdk" % "4.13",
+   "org.pac4j" % "pac4j-core" % "1.6.0",
+   "org.pac4j" % "play-pac4j_java" % "1.3.0",
+   "org.pac4j" % "pac4j-oauth" % "1.5.0"
 )
 
 resolvers ++= Seq(

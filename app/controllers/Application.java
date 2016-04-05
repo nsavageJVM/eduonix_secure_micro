@@ -1,11 +1,12 @@
 package controllers;
 
-import model.JsonContent;
+
 import org.pac4j.core.exception.TechnicalException;
 import org.pac4j.core.profile.CommonProfile;
 import org.pac4j.play.java.JavaController;
 import org.pac4j.play.java.RequiresAuthentication;
 import play.mvc.Result;
+
 
 
 public class Application extends JavaController {
